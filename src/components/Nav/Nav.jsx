@@ -1,28 +1,20 @@
-import Search from "../../container/Search/Search"
+import Search from "../Search/Search"
 import "./Nav.scss"
-import React, {useState} from 'react'
+import React from 'react'
+import FiltersList from "../Filterslist/FiltersList"
 
-const Nav = () => {
-    const [searchBeer, setsearchBeer] = useState("")
-    const [beer, setbeer] = useState({})
-
-    const handleInput = (e)=> {
-        e.preventDefault();
-        beerResults(searchBeer)
-    }
-
-    const beerResults = (beer) => {
-        fetch(`https://api.punkapi.com/v2/${beer}`)
-            .then((response) => response.json)
-            .then((beerData) => setsearchBeer(beerData))
-            .catch((err) => console.log(err))
-    }
-
+const Nav = (props) => {
+    const {handleInput, searchTerm, checkBoxABV, checkBoxRange, checkBoxPh} = props
     return (
-        <nav className="nav">
-            <Search handleInput={handleInput} searchBeer={searchBeer}/>
-        </nav>
-        
+        <>
+        <div className="nav">
+            <h1>Find Your Inner.dog</h1>
+            <div className= "nav__items">
+                <Search handleInput={handleInput} searchTerm={searchTerm}/>
+                <FiltersList checkBoxABV={checkBoxABV} checkBoxRange={checkBoxRange} checkBoxPh={checkBoxPh}/>
+            </div>
+        </div>
+        </>
     )
 }
 

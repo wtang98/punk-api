@@ -1,17 +1,24 @@
 import React from 'react'
+import "./Results.scss"
 
 const Results = (props) => {
-    const {results} = props;
-
-    return results.map(({image_url, name}) => {
-        
+    const {image_url, name, abv, description, ph, first_brewed, tagline} = props.beer
         return (
-            <div>
-            <h2>{name}</h2>
-            <img src={image_url} alt={image_url}/>
-        </div>
+            <div className= "api">
+                <div className = "api__name">
+                    <h6>{name}</h6>
+                    <p>{first_brewed}</p>
+                    <p>{tagline}</p>
+                    <p className = "api__name-desc">{description}</p>
+                </div>
+                <div className = "api__img">
+                    <img className = "api__img-i" src={image_url} alt={image_url}/>
+                    <p>{ph} ph</p>
+                    <p>abv: {abv}%</p>
+                </div>
+            </div>
         )
-    })
+
 }
 
 export default Results

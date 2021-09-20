@@ -1,8 +1,7 @@
-import React from 'react'
-
+import React from "react"
 
 const Search = (props) => {
-    const {handleInput, searchBeer} = props
+    const {handleInput, searchTerm} = props
     return (
         <div>
             <form className="beer-searcher">
@@ -12,10 +11,9 @@ const Search = (props) => {
                     type="text" 
                     id="search" 
                     placeholder="search beers here" 
-                    value={searchBeer} 
+                    value={searchTerm} 
                     onInput={handleInput}/>
             </form>
-            
         </div>
     )
 }

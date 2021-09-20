@@ -1,0 +1,26 @@
+.api{
+    border: black 1px solid;
+    border-radius: 35px;
+    padding: 20px;
+    margin: 10px;
+    width: 65%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    background-color: #194d6e;
+    &__name{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &-desc{
+            font-size: 10px;
+        }
+    }
+    &__img{
+        &-i{
+            width: 55px;
+            height: 160px;
+        }
+    }
+}
