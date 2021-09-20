@@ -6,7 +6,7 @@ const Results = (props) => {
         return (
             <div className= "api">
                 <div className = "api__name">
-                    <h6>{name}</h6>
+                    <h3>{name}</h3>
                     <p>{first_brewed}</p>
                     <p>{tagline}</p>
                     <p className = "api__name-desc">{description}</p>

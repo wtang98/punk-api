@@ -1,11 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
 import Nav from "./components/Nav/Nav"
-import ResultsAll from './components/ResultsAll/ResultsAll';
 import Results from './components/Results/Results';
-
-
-
 
 const App = () => {
   // Gets search input and cleans it
@@ -33,9 +29,30 @@ const App = () => {
       })
 
     // checkbox filters
+    // const checkBoxABV = (e) => {
+    // if(e.target.checked){
+    // return setBeers(beers.filter(beer => beer.abv >6))
+    // }else{
+    // return UseBeerApi()
+    // }
+    // }
+    // const checkBoxRange = (e) => {
+    //   if(e.target.checked){
+    //   return setBeers(beers.filter(beer => beer.first_brewed.split("/")[1]<2010))
+    //   }else{
+    //   return UseBeerApi()
+    //   }
+    //   }
+    // const checkBoxPh = (e) => {
+    //   if(e.target.checked){
+    //   return setBeers(beers.filter(beer => beer.ph < 4))
+    //   }else{
+    //   return UseBeerApi()
+    //   }
+    //   }
+    //filters using ternaries better?
     const checkBoxABV = (e) => {e.target.checked ? setBeers(beers.filter(beer => beer.abv > 6)) : UseBeerApi()};
     const checkBoxRange = (e) => {e.target.checked ? setBeers(beers.filter(beer => beer.first_brewed.split("/")[1]<2010)): UseBeerApi()}
-    
     const checkBoxPh = (e) =>{e.target.checked ? setBeers(beers.filter(beer => beer.ph < 4)): UseBeerApi()}
 
 
@@ -47,7 +64,7 @@ const App = () => {
   return (
     <div className="punk">
       <div className = "punk__page">
-        <div className = "punk__page">
+        <div className = "punk__page-n">
           <Nav handleInput={handleInput} searchTerm={searchTerm} checkBoxABV={checkBoxABV} checkBoxRange={checkBoxRange} checkBoxPh={checkBoxPh}/>
         </div>
         <div className = "punk__page-r">
