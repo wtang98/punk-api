@@ -15,7 +15,6 @@ const FiltersList = (props) => {
                 <input name = "classic" type="checkbox" id="ClassicRange" value="" onClick={checkBoxRange} />
                 <label For="ClassicRange">Classic Range</label>
             </form>
-
             <form className="fix2">
                 <input name = "acid" type="checkbox" id="Acidity" value="" onClick={checkBoxPh} />
                 <label For="Acidity">Acidity ph lower than 4</label>

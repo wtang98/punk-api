@@ -1,7 +1,7 @@
 import Search from "../Search/Search"
 import "./Nav.scss"
 import React from 'react'
-import FiltersList from "../Filterslist/FiltersList"
+import FiltersList from "../../containers/Filterslist/FiltersList"
 
 const Nav = (props) => {
     const {handleInput, searchTerm, checkBoxABV, checkBoxRange, checkBoxPh} = props

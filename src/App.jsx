@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.scss';
 import Nav from "./components/Nav/Nav"
 import Results from './components/Results/Results';
+import ResultsAll from './components/ResultsAll/ResultsAll';
 
 const App = () => {
   // Gets search input and cleans it
@@ -22,32 +23,27 @@ const App = () => {
   }
     useEffect(UseBeerApi, []); // need this dont know why?
 
-    //Filters the Api return with the search term
-    const results = beers.filter(beer => {
-          const resultsName = beer.name.toLowerCase();
-          return resultsName.includes(searchTerm) && beer.image_url;
-      })
-
+    
     // checkbox filters
     // const checkBoxABV = (e) => {
-    // if(e.target.checked){
+      // if(e.target.checked){
     // return setBeers(beers.filter(beer => beer.abv >6))
     // }else{
     // return UseBeerApi()
     // }
     // }
     // const checkBoxRange = (e) => {
-    //   if(e.target.checked){
+      //   if(e.target.checked){
     //   return setBeers(beers.filter(beer => beer.first_brewed.split("/")[1]<2010))
     //   }else{
     //   return UseBeerApi()
     //   }
     //   }
     // const checkBoxPh = (e) => {
-    //   if(e.target.checked){
+      //   if(e.target.checked){
     //   return setBeers(beers.filter(beer => beer.ph < 4))
     //   }else{
-    //   return UseBeerApi()
+      //   return UseBeerApi()
     //   }
     //   }
     //filters using ternaries better?
@@ -55,6 +51,11 @@ const App = () => {
     const checkBoxRange = (e) => {e.target.checked ? setBeers(beers.filter(beer => beer.first_brewed.split("/")[1]<2010)): UseBeerApi()}
     const checkBoxPh = (e) =>{e.target.checked ? setBeers(beers.filter(beer => beer.ph < 4)): UseBeerApi()}
 
+    //Filters the Api return with the search term
+    const results = beers.filter(beer => {
+          const resultsName = beer.name.toLowerCase();
+          return resultsName.includes(searchTerm) && beer.image_url;
+      })
 
     // maps onto the results card. dont know why other way wont work
     const beersList = results.map((beer) => {
@@ -69,6 +70,7 @@ const App = () => {
         </div>
         <div className = "punk__page-r">
           {beersList}
+          {/* {results && <ResultsAll /> } */}
         </div>
       </div>
     </div>
