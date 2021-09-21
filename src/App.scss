@@ -1,17 +1,12 @@
-*{
-    
-}
 .punk{
     display: flex;
     background-color: #82cee6;
     &__page{
         &-n{
-            
         }
         &-r{
             margin-left: 20vw;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
             background-color: #82cee6;
         }
     }

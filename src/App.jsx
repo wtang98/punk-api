@@ -58,9 +58,7 @@ const App = () => {
       })
 
     // maps onto the results card. dont know why other way wont work
-    const beersList = results.map((beer) => {
-      return <Results beer={beer}/>
-    })
+    
 
   return (
     <div className="punk">
@@ -69,8 +67,7 @@ const App = () => {
           <Nav handleInput={handleInput} searchTerm={searchTerm} checkBoxABV={checkBoxABV} checkBoxRange={checkBoxRange} checkBoxPh={checkBoxPh}/>
         </div>
         <div className = "punk__page-r">
-          {beersList}
-          {/* {results && <ResultsAll /> } */}
+          <ResultsAll results={results}/> 
         </div>
       </div>
     </div>
