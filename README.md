@@ -1,4 +1,4 @@
-![alt text](./src/assets/punk.png)
+![alt text](./src/assets/punk.PNG)
 
 # Punk API 
 
