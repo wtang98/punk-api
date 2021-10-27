@@ -10,7 +10,6 @@ This was an exercise in understanding component hierarchy in React and passing d
 On input the filters filter by the users input and the checkbox filters add set filters
 
 ### Languages Used
-
 * React
 * HTML 5
 * CSS 3/SCSS
