@@ -1,3 +1,16 @@
-## Punk Api Challenge
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This challenges aim was to link up a brewdog Api to react and filter the data 
+![alt text](./src/assets/punk.PNG)
+
+# Punk API 
+
+This application allows you to search for and filter for your favorite Brewdog beers. It uses the [Brewdog Punk API](https://punkapi.com/).
+
+This was an exercise in understanding component hierarchy in React and passing down state and functions as props.
+
+## Instructions
+On input the filters filter by the users input and the checkbox filters add set filters
+
+### Languages Used
+* React
+* HTML 5
+* CSS 3/SCSS
+* Javascript ES6
