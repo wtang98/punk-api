@@ -1,10 +1,21 @@
 .fullResult{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     // margin-left: 30px;
     // background-color: #82cee6;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 25vw);
     width: 79vw;
+}
+@media only screen and (max-width: 1582px) {
+    .fullResult{
+        grid-template-columns: repeat(2, 37vw);
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .fullResult{
+        grid-template-columns: repeat(1, 80vw);
+    }
 }

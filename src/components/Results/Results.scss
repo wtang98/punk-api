@@ -7,6 +7,7 @@
     height: 300px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: 30px;
     background-color: #194d6e;
     color: #82cee6;
@@ -23,5 +24,16 @@
             width: 55px;
             height: 160px;
         }
+    }
+}
+@media only screen and (max-width: 1582px) {
+    .api{
+        width: 33vw;
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .api{
+        width: auto;
     }
 }
